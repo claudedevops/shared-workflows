@@ -12,6 +12,7 @@ jobs:
     uses: ./.github/workflows/tests.yaml
   
   apply:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: deploy
